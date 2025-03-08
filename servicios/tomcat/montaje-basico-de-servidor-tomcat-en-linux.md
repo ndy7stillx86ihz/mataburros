@@ -1,5 +1,6 @@
 # Montaje Básico de Servidor Tomcat en Debian
-![[tomcat.svg]]
+![tomcat](assets/tomcat.svg)
+
 ## Prerrequisitos
 - OpenJDK >= 11.0.0 (`apt install default-jdk`)
 - Permisos de `sudo`
@@ -106,9 +107,9 @@ systemctl status tomcat
 ```
 	Debería salir algo así:
 	● tomcat.service - Tomcat
-     Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; preset: enabled)
-     Active: active (running) since Sat 2025-03-08 17:07:08 CST; 1h 22min ago
-    Process: 200609 ExecStart=/opt/tomcat/bin/startup.sh (code=exited, status=0/SUCCESS)
+	 Loaded: loaded (/etc/systemd/system/tomcat.service; enabled; preset: enabled)
+	 Active: active (running) since Sat 2025-03-08 17:07:08 CST; 1h 22min ago
+	Process: 200609 ExecStart=/opt/tomcat/bin/startup.sh (code=exited, status=0/SUCCESS)
 	   Main PID: 200616 (java)
 	      Tasks: 36 (limit: 9113)
 	     Memory: 189.6M
@@ -121,7 +122,5 @@ ufw allow 8080
 ```
 ## Probando el servicio
 Llegados a este punto si todo salió bien al, en el navegador, entrar a la URL `http://<tu-ip-probably-localhost>:8080` se debería ver la página de bienvenida de Tomcat, donde a la derecha se ven tres botones, entre ellos las webapps de las que se hablaron anteriormente, `manager`y `host-manager`:
-![[Pasted image 20250308183555.png]]
+![Pasted image 20250308183555.png](assets/tomcat-web.png)
 Al entrar a cualquiera de estas webs, tocando sus respectivos botones te pedirán las credenciales que [configuraste anteriormente](#^68ef65), éntralas y ya puedes empezar a desplegar tus aplicaciones programadas usando Jakarta EE 9.
-
-###### By: [Carlos Manuel Fernández Pérez](https://github.com/ndy7stillx86ihz/)
