@@ -1,2 +1,2 @@
 # Mataburros
-Guías, estudios, resúmenes, fragmentos de códigos, etc.
+Guías, estudios, resúmenes, fragmentos de códigos, etc..
