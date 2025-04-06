@@ -1,5 +1,5 @@
 # Montaje Básico de Servidor Tomcat en Debian
-![tomcat](assets/tomcat.svg)
+![tomcat](./assets/tomcat.svg)
 
 ## Prerrequisitos
 - OpenJDK >= 11.0.0 (`apt install default-jdk`)
