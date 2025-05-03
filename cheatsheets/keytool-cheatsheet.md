@@ -188,6 +188,6 @@ $JAVA_HOME/lib/security/cacerts
 
 ## Consejos
 
-1. Siempre hacerle un backup a la keystore antes de realizar cambios.
+1. SIEMPRE HACERLE UN BACKUP A LA KEYSTORE ANTES DE REALIZAR CAMBIOS!
 2. Usa `keytool -list` frecuentemente para verificar los contenidos.
 3. Los certificados importados deben estar en orden: primero el certificado del servidor, luego cualquier intermedio, y al final la raíz (si no se confía por default).
