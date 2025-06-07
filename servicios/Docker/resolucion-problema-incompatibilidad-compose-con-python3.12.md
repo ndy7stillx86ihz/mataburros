@@ -17,13 +17,13 @@ Hay varias vías para resolver esto:
     3. Asignale permisos de ejecucion al binario con `chmod +x`.
     
     En Debian se haria el proceso completo asi:
-        ```sh
-        wget https://github.com/docker/compose/releases/download/v2.37.0/docker-compose-linux-x86_64 && \
-        mkdir -p ~/.docker/cli-plugins && \
-        mv docker-compose-linux-x86_64 ~/.docker/cli-plugins/docker-compose && \
-        chmod +x ~/.docker/cli-plugins/docker-compose && \
-        systemctl restart docker # opcional
-        ```
+    ```sh
+    wget https://github.com/docker/compose/releases/download/v2.37.0/docker-compose-linux-x86_64 && \
+    mkdir -p ~/.docker/cli-plugins && \
+    mv docker-compose-linux-x86_64 ~/.docker/cli-plugins/docker-compose && \
+    chmod +x ~/.docker/cli-plugins/docker-compose && \
+    systemctl restart docker # opcional
+    ```
 
 2. Crearse un entorno virtual (demasiado tedioso) con Venv, UV, Poetry o cualquier otro, en lo personal no soporto los entornos virtuales, así que ésta ni la considero.
 
