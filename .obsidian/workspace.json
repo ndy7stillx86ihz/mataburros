@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "servicios/WSO2/Configuracion de certificados en servidores IS y APIM.md",
-                "mode": "source",
+                "file": "dev/java/agregar-certificado-confianza-al-jdk.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Configuracion de certificados en servidores IS y APIM"
+              "title": "agregar-certificado-confianza-al-jdk"
             }
           }
         ]
@@ -167,8 +167,9 @@
   },
   "active": "d388ba62c4af6310",
   "lastOpenFiles": [
-    "servicios/WSO2/certificates-utils.md",
     "servicios/WSO2/Configuracion de certificados en servidores IS y APIM.md",
+    "dev/java/agregar-certificado-confianza-al-jdk.md",
+    "servicios/WSO2/certificates-utils.md",
     "servicios/WSO2/Api-Manager/Configurar IS 7.x.x como Key Manager del APIM.md",
     "servicios/Docker/resolucion-problema-incompatibilidad-compose-con-python3.12.md"
   ]
