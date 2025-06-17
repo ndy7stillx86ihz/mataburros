@@ -4,7 +4,6 @@ PENDIENTE**
 ### Creación de un proyecto utilizando las tecnologías SQLAlchemy, Fastapi y Alembic con el gestor uv.
 
 Crear un directorio para el proyecto
-``
 ``` 
 mkdir nombre_del_directorio
 ```

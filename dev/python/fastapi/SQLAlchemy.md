@@ -8,7 +8,6 @@ Declaración de la relación, como contenedor de varios elementos de la hija.
 ```
 children : Mapped[List["children"]] = relationship(back_populates="parent")
 ```
-``
 * Clase Hijo:
 Declarar una ForeignKey y la relación con la clase padre.
 
@@ -80,7 +79,6 @@ relation2: Mapped[List[Class1]] = relationship(secondary=name_table_associaton, 
 ```
 
 *Aclaración*: La declaración primary_key = True define que las combinaciones de los dos valores debe ser única para generar una primary key para la tabla asociativa. Evita duplicados.
-
 
 
 
