@@ -181,5 +181,5 @@ gT or :tabprev or :tabp # move to the previous tab
 ```
 
 ```sh
-hola como estas miamor jajajajajaajajajajajajajajajajajajaj
+hola como estas miamor jajajajajaajajajajajajajajajajajajajajajajajaj
 ```
