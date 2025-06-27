@@ -180,4 +180,6 @@ gT or :tabprev or :tabp # move to the previous tab
 :tabdo command          # run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
 ```
 
-?
+```sh
+hola como estas miamor jajaja
+```
