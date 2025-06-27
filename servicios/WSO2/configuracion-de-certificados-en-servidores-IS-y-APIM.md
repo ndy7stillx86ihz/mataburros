@@ -1,3 +1,5 @@
+# Configuracion de certificados en los servidores IS y APIM
+
 Antes que nada es importante hacer un backup completo de la carpeta de `<WSO2HOME>/repository/resources/security`, y trabajar en un entorno aislado de esa salva, solo es necesario arrastrar al entorno en el que se este el `client-trustore.jks`.
 
 ## Pasos iniciales que se deben hacer en ambos servidores[^1]
@@ -9,17 +11,17 @@ Ya el APIM y el IS traen una keystore por defecto, `wso2carbon.jks` (el IS a par
 ```sh
 openssl pkcs12 -export -in <certificate file>.crt -inkey <private>.key -name "<alias>" -out <pfx keystore name>.p12
 ```
-2. Convertir a Java Keystore (JKS) de ser necesario
+2. Convertir a Java Keystore (JKS) (opcional)
 ```sh
 keytool -importkeystore -srckeystore <pkcs12 file name>.p12 -srcstoretype pkcs12 -destkeystore <JKS name>.jks -deststoretype JKS
 ```
-3. Importar el root CA al keystore:
+3. Importar el root CA al keystore (opcional)
 ```sh
 keytool -import -v -trustcacerts -alias ExternalCARoot -file AddTrustExternalCARoot.crt -keystore newkeystore.jks -storepass mypassword
 ```
 ### Importar certificados a la Truststore:
 
-1. Exportar la clave publica de la keystore
+1. Exportar el certificado de la keystore (solo en caso de no tenerlo ya)
 ```sh
 keytool -export -alias certalias -keystore newkeystore.jks -file <public key name>.pem
 ```
@@ -32,4 +34,7 @@ keytool -import -alias certalias -file <public key name>.pem -keystore client-tr
 	```sh
 	keytool -v -list -keystore <keystore>.jks -storepass wso2carbon
 	```
-	
+### Cambiar la contraseña a la Truststore (Opcional)
+```sh
+keytool -storepasswd -new nueva_clave -keystore client-truststore.jks
+```

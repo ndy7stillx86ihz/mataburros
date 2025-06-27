@@ -165,6 +165,18 @@ keytool -printcert -file cert.crt
 keytool -list -keystore keystore.p12 -storetype PKCS12
 ```
 
+### Comparar un certificado contra el de una keystore
+```sh
+# para el .pem:
+openssl x509 -in tu_certificado.pem -noout -modulus | openssl md5
+
+# para el cert del keystore:
+keytool -exportcert -alias tu_alias -keystore tu_keystore.jks -rfc | openssl x509 -noout -modulus | openssl md5
+```
+o:
+```sh
+diff <(openssl x509 -in tu_certificado.pem -noout -modulus | openssl md5) <(keytool -exportcert -alias tu_alias -keystore tu_keystore.jks -rfc | openssl x509 -noout -modulus | openssl md5)
+```
 ---
 
 ## Información adicional

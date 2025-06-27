@@ -2,18 +2,18 @@
 
 Hay situaciones en las que una request a un recurso externo nos da error 500 usando ciertos clientes HTTP, que no tienen por defecto configurado el confiar en cualquier certificado, o sea el `SSLHostnameVerify = false`,  o una Truststore autogestionada, como por ejemplo:
 ```java
-	// no verificar el certificado
-	sslContext.init(
-			new KeyManager[0],
-			new TrustManager[]{
-					new DefaultTrustManager()},
-			new SecureRandom()
-	);
+// no verificar el certificado
+sslContext.init(
+		new KeyManager[0],
+		new TrustManager[]{
+				new DefaultTrustManager()},
+		new SecureRandom()
+);
 ```
 Por ejemplo el `RestClient`de Spring Framework 6 si hace esta verificacion del SSL, usando la TrustStore del JDK activo, por lo que si haces una request a un sitio con certificado autofirmado, o de una CA no reconocida recibiras un error algo asi:
 ```json
 { 
-	"error": "I/O error on POST request for \"https://identity-factdev.novaguard.pro/oauth2/token\": PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target", 
+	"error": "I/O error on POST request for \"https://idp.example.com/oauth2/token\": PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target", 
 	"status": 500, 
 	"errorCode": null 
 }
