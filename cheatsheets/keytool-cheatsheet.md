@@ -173,7 +173,7 @@ openssl x509 -in tu_certificado.pem -noout -modulus | openssl md5
 # para el cert del keystore:
 keytool -exportcert -alias tu_alias -keystore tu_keystore.jks -rfc | openssl x509 -noout -modulus | openssl md5
 ```
-o:
+o
 ```sh
 diff <(openssl x509 -in tu_certificado.pem -noout -modulus | openssl md5) <(keytool -exportcert -alias tu_alias -keystore tu_keystore.jks -rfc | openssl x509 -noout -modulus | openssl md5)
 ```
