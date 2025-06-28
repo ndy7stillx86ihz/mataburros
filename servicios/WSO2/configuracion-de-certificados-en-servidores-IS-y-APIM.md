@@ -7,7 +7,7 @@ Ya el APIM y el IS traen una keystore por defecto, `wso2carbon.jks` (el IS a par
 
 ### Creando la Keystore
 
-1. Crear Keystore a partir de un certificado usando PKCS12
+1. Crear Keystore a partir de un certificado y una llave privada usando PKCS12
 ```sh
 openssl pkcs12 -export -in <certificate file>.crt -inkey <private>.key -name "<alias>" -out <pfx keystore name>.p12
 ```
